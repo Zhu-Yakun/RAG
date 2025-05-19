@@ -1,0 +1,11 @@
+chunk_to_vector.py和to_vector.py用于文本块转向量
+
+create_db.py建立chroma数据库
+
+Search.py是数据库初始提供的查询接口
+
+retrieve_and_export_answers.py为主文件
+
+search_method.py实现答案检索
+
+view_chroma_db用来帮助查看数据库的内容
