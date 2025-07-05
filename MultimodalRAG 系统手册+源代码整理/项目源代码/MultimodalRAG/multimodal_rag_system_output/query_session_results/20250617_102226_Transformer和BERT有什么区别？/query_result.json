@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 231,
+            "text": "transformer模型架构",
+            "image_path": "transformer.png",
+            "id": "transformer",
+            "score": 0.9285634756088257
+        },
+        {
+            "internal_id": 486,
+            "text": "Transformer是基础架构（含编码器与解码器），而BERT是其里程碑式应用——它仅堆叠Transformer编码器层，结合掩码语言建模与下一句预测任务进行大规模预训练，开创了\"预训练+微调\"范式，使同一模型能高效适配多种下游任务，成为自然语言理解的基础模型。简言之，Transformer提供核心组件，BERT通过创新训练方式将其转化为通用语义理解工具。",
+            "image_path": null,
+            "id": "Transformer和BERT类似吗？",
+            "score": 0.9281193017959595
+        },
+        {
+            "internal_id": 485,
+            "text": "与Transformer架构相似的模型主要分为三类：一是核心改进型，如优化计算效率的Linformer、Performer、Reformer，增强长程依赖的Transformer-XL，以及架构简化的FNet；二是结构创新但目标一致的替代模型，例如采用卷积的Hyena、融合RNN并行优势的RWKV和RetNet，以及基于状态空间理论的高效模型Mamba；三是应用扩展型，如计算机视觉中的Vision Transformer（ViT）。这些模型共享Transformer的序列建模核心目标，通过调整注意力机制（如稀疏化、线性化）、引入递归结构或完全替换自注意力（如傅里叶变换、状态空间方程），在提升效率、处理长序列或跨模态任务中实现性能突破，尤其Mamba等新型架构已展现出显著竞争力。",
+            "image_path": null,
+            "id": "和Transformer相似的神经网络模型有哪些？",
+            "score": 0.9033583998680115
+        }
+    ],
+    "generated_response": "Transformer和BERT的主要区别在于它们的设计目的和应用方式：\n\n1. **Transformer**：\n   - Transformer是一个模型架构，包含编码器和解码器。\n   - 它是一种基于自注意力机制的架构，广泛用于处理序列数据。\n   - Transformer主要作为一个基础组件，用于构建更复杂的模型。\n\n2. **BERT**：\n   - BERT（Bidirectional Encoder Representations from Transformers）是建立在Transformer架构之上的一个里程碑式应用。\n   - 它通过堆叠Transformer编码器层，结合掩码语言建模与下一句预测任务进行大规模预训练。\n   - BERT开创了“预训练+微调”的范式，能够高效适配多种下游任务，是自然语言理解的基础模型。\n\n简言之，Transformer提供核心组件，而BERT通过创新训练方式将其转化为通用语义理解工具。Transformer是基础架构，而BERT是这种架构的一个具体应用实例。",
+    "error": null
+}

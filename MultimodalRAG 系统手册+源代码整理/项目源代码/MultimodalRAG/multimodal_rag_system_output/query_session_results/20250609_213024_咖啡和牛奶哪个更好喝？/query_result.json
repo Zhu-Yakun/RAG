@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 233,
+            "text": "知识图谱示例",
+            "image_path": "images\\知识图谱.png",
+            "id": "知识图谱",
+            "score": 0.9821030497550964
+        },
+        {
+            "internal_id": 262,
+            "text": "你知道计算机是如何理解这句话的吗？",
+            "image_path": null,
+            "id": "2.1 自动分词（传统方法）2",
+            "score": 0.9743015766143799
+        },
+        {
+            "internal_id": 232,
+            "text": "朴素贝叶斯公式",
+            "image_path": null,
+            "id": "朴素贝叶斯公式",
+            "score": 0.971721887588501
+        }
+    ],
+    "generated_response": "I could not find relevant information in the knowledge base. The following answer is based on my general knowledge and may not be professionally accurate.\n\n咖啡和牛奶哪个更好喝这个问题非常主观，取决于个人口味偏好。有些人喜欢咖啡的浓郁和苦味，而有些人可能更喜欢牛奶的香甜和滑顺。因此，没有一个客观的答案来决定哪个更好喝。",
+    "error": null
+}

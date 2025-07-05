@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 484,
+            "text": "BERT和GPT3的区别与对比",
+            "image_path": "BERT_GPT3的区别.png",
+            "id": "BERT_GPT3的区别",
+            "score": 0.9618978500366211
+        },
+        {
+            "internal_id": 223,
+            "text": "CNN模型架构",
+            "image_path": "CNN.png",
+            "id": "CNN",
+            "score": 0.8245853185653687
+        },
+        {
+            "internal_id": 221,
+            "text": "Blip模型架构",
+            "image_path": "Blip.png",
+            "id": "Blip",
+            "score": 0.8233168125152588
+        }
+    ],
+    "generated_response": "I could not find relevant information in the knowledge base. The following answer is based on my general knowledge and may not be professionally accurate.\n\nThe question refers to an image, but neither the filename nor a textual description is provided in the reference documents. In a general sense, an image related to the topic of the reference documents might depict models or architectures of AI algorithms like BERT, GPT3, CNN, or Blip. The specific content of the image would depend on which model or architecture it is depicting.",
+    "error": null
+}

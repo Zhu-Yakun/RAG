@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP知识学习平台</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: none;
+            width: 100vw;
+            padding: 0;
+            background: none;
+            box-shadow: none;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: #3b3b6d;
+            letter-spacing: 2px;
+            margin: 32px 0 18px 0;
+        }
+        .subtitle {
+            margin-top: 8px;
+            font-size: 1.08em;
+            color: #64748b;
+            letter-spacing: 0.5px;
+        }
+        .status-box {
+            margin: 12px auto 0 auto;
+            padding: 6px 18px;
+            border-radius: 12px;
+            display: inline-block;
+            font-size: 1rem;
+            background: #f1f5f9;
+            color: #3b3b6d;
+        }
+        main {
+            margin-top: 10px;
+        }
+        #main-3col-layout {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            align-items: stretch;
+            justify-content: space-between;
+            min-height: 70vh;
+            width: 100vw;
+            padding: 0 4vw 0 4vw;
+            box-sizing: border-box;
+        }
+        form#query-form {
+            width: 100%;
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 22px 18px 12px 18px;
+            box-shadow: 0 2px 8px rgba(60,60,120,0.06);
+            margin-bottom: 0;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            font-weight: 500;
+            color: #3b3b6d;
+            display: block;
+            margin-bottom: 6px;
+        }
+        textarea, input[type="file"] {
+            width: 100%;
+            border: 1.5px solid #c7d2fe;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 1rem;
+            transition: border 0.2s;
+            background: #fff;
+        }
+        textarea:focus, input[type="file"]:focus {
+            border-color: #6366f1;
+            outline: none;
+        }
+        #submit-button {
+            background: linear-gradient(90deg, #6366f1 0%, #38bdf8 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(60,60,120,0.08);
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        #submit-button:hover {
+            background: linear-gradient(90deg, #4f46e5 0%, #0ea5e9 100%);
+            box-shadow: 0 4px 16px rgba(60,60,120,0.12);
+        }
+        #image-preview {
+            display: block;
+            margin-top: 8px;
+            max-width: 180px;
+            max-height: 120px;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(60,60,120,0.10);
+        }
+        .hidden { display: none; }
+        #results-area {
+            margin-top: 10px;
+        }
+        #results-area h2 {
+            color: #3b3b6d;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .result-section {
+            margin-bottom: 18px;
+        }
+        .response-box {
+            background: #f1f5f9;
+            border-radius: 10px;
+            padding: 14px;
+            font-size: 1.08rem;
+            color: #22223b;
+            margin-top: 6px;
+            word-break: break-all;
+        }
+        .docs-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .doc-card {
+            background: #f8fafc;
+            border-radius: 10px;
+            box-shadow: 0 1px 4px rgba(60,60,120,0.06);
+            padding: 10px 14px;
+            color: #3b3b6d;
+            font-size: 0.98rem;
+        }
+        footer {
+            text-align: center;
+            color: #a1a1aa;
+            font-size: 0.98rem;
+            margin-top: 30px;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 10px 2vw; }
+            form#query-form { padding: 12px 4vw; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="max-width:none;width:100vw;padding:0 0 0 0;background:none;box-shadow:none;">
+        <header class="main-header" style="text-align:center;margin-bottom:18px;">
+            <h1 style="font-size:2.5rem;color:#3b3b6d;letter-spacing:2px;margin:32px 0 18px 0;">NLP多模态智能问答系统</h1>
+            <div class="subtitle" style="margin-top:8px;font-size:1.08em;color:#64748b;letter-spacing:0.5px;">
+                小组成员：罗尹泽、朱亚琨、李心悦、晏景豪、王泓烨
+            </div>
+        </header>
+        <main>
+            <div id="main-3col-layout" style="display:flex;flex-direction:row;gap:32px;align-items:stretch;justify-content:space-between;min-height:70vh;width:100vw;padding:0 4vw 0 4vw;box-sizing:border-box;">
+                <!-- 左侧：提问表单 -->
+                <div id="query-form-col" style="flex:1;min-width:320px;max-width:480px;display:flex;align-items:flex-start;">
+                    <form id="query-form" style="width:100%;background:#f8fafc;border-radius:14px;padding:22px 18px 12px 18px;box-shadow:0 2px 8px rgba(60,60,120,0.06);margin-bottom:0;">
+                        <div class="form-group">
+                            <label for="query-text">请输入你的NLP问题：</label>
+                            <textarea id="query-text" name="query_text" rows="4" placeholder="例如：什么是BERT模型？"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="query-image">上传相关图片（可选）：</label>
+                            <input type="file" id="query-image" name="query_image" accept="image/*">
+                        </div>
+                        <button type="submit" id="submit-button">提交问题</button>
+                    </form>
+                </div>
+                <!-- 中间：大模型生成答案 -->
+                <div id="generation-section" class="result-section hidden" style="flex:1.2;min-width:340px;max-width:700px;display:flex;flex-direction:column;align-items:stretch;">
+                    <h3 style="margin-bottom:16px;">智能生成的答案</h3>
+                    <div id="generated-response" class="response-box" style="flex:1;min-height:180px;"></div>
+                </div>
+                <!-- 右侧：检索到的相关知识 -->
+                <div id="retrieval-section" class="result-section hidden" style="flex:1.2;min-width:340px;max-width:700px;display:flex;flex-direction:column;align-items:stretch;">
+                    <h3 style="margin-bottom:16px;">检索到的相关知识</h3>
+                    <div id="retrieved-docs" class="docs-container" style="flex:1;"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- 全局图片弹窗 Modal -->
+    <div id="image-modal" class="hidden" style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(30,41,59,0.72);display:flex;align-items:center;justify-content:center;transition:background 0.2s;">
+        <img id="modal-img" src="" alt="预览大图" style="max-width:80vw;max-height:80vh;border-radius:14px;box-shadow:0 8px 32px rgba(60,60,120,0.22);background:#fff;">
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

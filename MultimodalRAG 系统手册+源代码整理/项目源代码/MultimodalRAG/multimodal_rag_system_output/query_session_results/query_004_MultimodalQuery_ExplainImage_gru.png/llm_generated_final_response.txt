@@ -1,0 +1,8 @@
+Based on the provided reference documents and the image filename 'gru.png', I can infer that the image likely represents a circuit related to the 'gru' model architecture. However, the reference documents do not contain specific information about the working principle, key features, or design considerations of the circuit shown in 'gru.png'. 
+
+The text content from Reference Document 1 describes a comparator circuit, which is a different type of circuit. It details the components and functions of a comparator, such as the differential input stage, current mirror load, gain stage, output buffer/logic inverter, bias/tail current source, and more. This information is not directly related to the 'gru.png' image.
+
+Since there is no specific information about the 'gru.png' image in the provided reference documents, I cannot provide a detailed explanation of its working principle, key features, or design considerations. 
+
+Therefore, my answer is:
+According to the provided reference documents, I cannot find information about the working principle, key features, or design considerations of the circuit shown in the image 'gru.png'.

@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 484,
+            "text": "BERT和GPT3的区别与对比",
+            "image_path": "BERT_GPT3的区别.png",
+            "id": "BERT_GPT3的区别",
+            "score": 0.9618978500366211
+        },
+        {
+            "internal_id": 223,
+            "text": "CNN模型架构",
+            "image_path": "CNN.png",
+            "id": "CNN",
+            "score": 0.8245853185653687
+        },
+        {
+            "internal_id": 221,
+            "text": "Blip模型架构",
+            "image_path": "Blip.png",
+            "id": "Blip",
+            "score": 0.8233168125152588
+        }
+    ],
+    "generated_response": "I could not find relevant information in the knowledge base. The following answer is based on my general knowledge and may not be professionally accurate.\n\nThe question refers to an image, but the textual content of the provided reference documents does not include a description of the image or its filename. Without specific information about the image, I cannot accurately describe what it depicts. Typically, if an image is associated with a document, it would be related to the content of that document. However, without access to the actual image or its description, I cannot provide a detailed interpretation.",
+    "error": null
+}

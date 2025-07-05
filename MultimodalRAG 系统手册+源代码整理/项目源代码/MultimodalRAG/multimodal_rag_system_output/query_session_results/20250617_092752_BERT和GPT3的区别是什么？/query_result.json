@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 484,
+            "text": "BERT和GPT3的区别与对比",
+            "image_path": "images\\BERT_GPT3的区别.png",
+            "id": "BERT_GPT3的区别",
+            "score": 0.9798553586006165
+        },
+        {
+            "internal_id": 220,
+            "text": "Bert模型架构。",
+            "image_path": "images\\Bert.png",
+            "id": "Bert",
+            "score": 0.9516449570655823
+        },
+        {
+            "internal_id": 350,
+            "text": "Bert没有使用传统的从左向右，或者从右向左的语言模型来做预训练， 而是使用了两个非监督的任务做预训练。Task #1: Masked LM 为了训练深度双向表示，只需随机屏蔽一些输入tokens，然后预 测这些被屏蔽标记。也可以被当作完形填空(cloze)任务 • 随机遮蔽输入词块的某些部分； • 仅预测那些被遮蔽词块； • 被遮盖的标记对应的最终的隐藏向量被当作softmax的关于该词的一个 输出，和其他标准语言模型中相同。Task #1: Masked LM vocabulary size Linear Multi-class Classifier Predicting the masked word …… BERT 潮水 退了 [MASK] 就 知道 ……。Task #1: Masked LM（MLM） 虽然这样做可以获得一个双向的预训练模型，但缺点是在预训练和微 调之间不匹配，因为[MASK] token在微调期间不会出现。",
+            "image_path": null,
+            "id": "4-上下文表征（修改）28",
+            "score": 0.9416995048522949
+        }
+    ],
+    "generated_response": "BERT和GPT3的区别主要体现在它们的预训练方法和应用场景上：\n\n1. **预训练方法**：\n   - **BERT**（Bidirectional Encoder Representations from Transformers）使用了两个非监督的任务进行预训练。首先是**Masked LM**，用于训练深度双向表示，通过随机屏蔽一些输入tokens，然后预测这些被屏蔽的标记。另一个任务是**Next Sentence Prediction**，用于区分两个句子是否在同一个语境中。\n   - **GPT3**（Generative Pre-trained Transformer 3）则采用了自回归的方式，即模型预测下一个token，并逐步构建整个句子。\n\n2. **应用场景**：\n   - **BERT**由于其双向的特性，在问答系统、文本分类、命名实体识别等需要理解上下文信息的任务中表现良好。\n   - **GPT3**在自然语言生成、机器翻译、文本摘要等需要流畅性和创造性的任务中更为出色。\n\n这些差异导致了BERT和GPT3在特定任务上的表现各有千秋。根据Reference Document 3的描述，BERT的预训练方法虽然可以获得双向的预训练模型，但在预训练和微调之间可能存在不匹配的问题，因为token在微调期间不会出现。",
+    "error": null
+}

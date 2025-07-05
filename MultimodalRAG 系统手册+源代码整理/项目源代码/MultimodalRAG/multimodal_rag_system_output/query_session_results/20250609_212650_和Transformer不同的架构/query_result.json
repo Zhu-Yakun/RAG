@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 231,
+            "text": "transformer模型架构",
+            "image_path": "images\\transformer.png",
+            "id": "transformer",
+            "score": 0.9438329339027405
+        },
+        {
+            "internal_id": 329,
+            "text": "• Transformer 的核心部分，包含一个 编码器层和解码器层的堆栈。• 在编码器堆栈和解码器堆栈之前，都 有对应的嵌入层。• 而在解码器堆栈后，有一个输出层来 生成最终的输出。",
+            "image_path": null,
+            "id": "4-上下文表征（修改）7",
+            "score": 0.9318568706512451
+        },
+        {
+            "internal_id": 349,
+            "text": "使用Transformer的Encoder结构进行特征抽取。对于一个给定的样本（标记），它的输入包括三部分的编码 （embedding）：token, segment, and position.。",
+            "image_path": null,
+            "id": "4-上下文表征（修改）27",
+            "score": 0.9158229827880859
+        }
+    ],
+    "generated_response": "I could not find relevant information in the knowledge base. The following answer is based on my general knowledge and may not be professionally accurate.\n\n和Transformer不同的架构有很多，以下是一些常见的例子：\n\n1. **RNN (Recurrent Neural Networks)**: 与Transformer的序列处理方式不同，RNN通过循环连接来处理序列数据，每个时间步的输出依赖于前一个时间步的隐藏状态。\n\n2. **CNN (Convolutional Neural Networks)**: CNN通常用于图像识别和视频分析，通过卷积层提取局部特征，适合于处理具有网格结构的数据。\n\n3. **LSTM (Long Short-Term Memory)**: LSTM是RNN的一种变体，它通过引入门控机制来避免长期依赖问题，适用于处理长序列数据。\n\n4. **GRU (Gated Recurrent Units)**: GRU是LSTM的简化版本，它通过合并遗忘门和输入门来减少参数数量，适用于需要快速训练的场景。\n\n5. **BERT (Bidirectional Encoder Representations from Transformers)**: BERT是一种预训练语言表示模型，它使用Transformer架构，但通过双向编码来学习上下文表示。\n\n这些架构各有优缺点，适用于不同的任务和数据类型。",
+    "error": null
+}

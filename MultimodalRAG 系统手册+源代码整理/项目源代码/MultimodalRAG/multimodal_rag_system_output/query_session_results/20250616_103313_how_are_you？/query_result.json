@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 237,
+            "text": "ELIZA的一段脚本： ØMen are all alike。（男人都一样。） ØIN WHAT WAY ? （怎么一样法？） ØThey’re always bugging us about something or other. Ø （他们总是用这样的或那样的事情来烦扰我们） ØCAN YOU THINK OF SPACIFIC EXAMPLE ? Ø （你能举一个例子吗？）。",
+            "image_path": null,
+            "id": "1.概论4",
+            "score": 0.8758800625801086
+        },
+        {
+            "internal_id": 293,
+            "text": "中/B 华/M 人/M 民/M 共/M 和/M 国/E 字的类型分成六类（6-tag），即：S（单字）， B（词首），C（第二个字），D（第三个字），M （词中），E（词尾）。中/B 华/C 人/D 民/M 共/M 和/M 国/E。分词问题转化为分类问题，即对每个字分类。机器学习可以很好地处理分类问题，所以可以使用机 器学习的方法来分词。正向最大匹配 隐马尔科夫模型HMM 最大熵模型MEM 传统标注方法 最大熵隐马尔科夫模型MEMM 条件随机场CRF 基于机器学习 的标注方法 深度神经网络，如RNN，LSTM。",
+            "image_path": null,
+            "id": "2.3 自动分词（新方法）20234",
+            "score": 0.8743960857391357
+        },
+        {
+            "internal_id": 334,
+            "text": "成 Self-Attention 机制。",
+            "image_path": null,
+            "id": "4-上下文表征（修改）12",
+            "score": 0.8703910112380981
+        }
+    ],
+    "generated_response": "I could not find relevant information in the knowledge base. The following answer is based on my general knowledge and may not be professionally accurate.\n\nI am an AI assistant and do not experience emotions, so I do not have feelings of how I am. However, I am ready and available to assist you with any questions or tasks you have.",
+    "error": null
+}

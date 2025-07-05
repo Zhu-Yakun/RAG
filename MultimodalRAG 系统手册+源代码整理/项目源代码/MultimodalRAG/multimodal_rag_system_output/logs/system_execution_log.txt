@@ -1,0 +1,217 @@
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.setup_logging:86] - 全局日志记录器配置完成。日志将同时输出到控制台，并写入文件: multimodal_rag_system_output\logs\system_execution_log.txt
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2040] - 
+================================================================================
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2041] - ========= Multimodal Retrieval-Augmented Generation (RAG) System =========
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2042] - =========                     Main Execution Start                   =========
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2043] - ================================================================================
+
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2044] - User-defined run identifier (used as fixed directory name): multimodal_rag_system_output
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2045] - Sanitized run identifier (final directory name): multimodal_rag_system_output
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2046] - All output data will be saved to the fixed top-level directory: D:\_MyFile\project\MultimodalRAG\multimodal_rag_system_output
+2025-06-17 09:23:57,435 - WARNING - [MultimodalRAG.py.<module>:2047] - NOTE: This top-level output directory name is fixed. Subsequent runs with the same identifier will OVERWRITE content in this directory (including logs, database, indices, and query results).
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2053] - Data source config: JSON metadata file='data.json', Image directory='images'
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2071] - Database file will be saved to: multimodal_rag_system_output\data_storage\database\multimodal_doc_store.db
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2072] - Faiss index files will be saved to directory: multimodal_rag_system_output\data_storage\vector_indices
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2073] - Query session results will be saved to directory: multimodal_rag_system_output\query_session_results
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2083] - Model configuration: CLIP Model='openai/clip-vit-base-patch32', Large Language Model (LLM)='glm-4-flash'
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.<module>:2089] - 
+--- [Main Flow] Step 1: Load document data from JSON and associate image files ---
+2025-06-17 09:23:57,435 - INFO - [MultimodalRAG.py.load_data_from_json_and_associate_images:162] - 开始从 JSON 文件 'data.json' 加载数据，并在目录 'images' 中关联图像...
+2025-06-17 09:23:57,450 - INFO - [MultimodalRAG.py.load_data_from_json_and_associate_images:195] - 已成功从 'data.json' 加载 396 条原始记录。
+2025-06-17 09:23:57,671 - INFO - [MultimodalRAG.py.load_data_from_json_and_associate_images:261] - 成功准备了 396 个文档用于后续处理。
+2025-06-17 09:23:57,671 - INFO - [MultimodalRAG.py.load_data_from_json_and_associate_images:264] - 在有效文档中，共有 15 个文档成功关联了图像文件。
+2025-06-17 09:23:57,671 - INFO - [MultimodalRAG.py.load_data_from_json_and_associate_images:271] - --- 数据加载与图像关联流程结束 ---
+2025-06-17 09:23:57,671 - INFO - [MultimodalRAG.py.<module>:2098] - --- [Main Flow] Step 1 Complete: Successfully loaded and prepared 396 documents for indexing. ---
+
+2025-06-17 09:23:57,879 - INFO - [MultimodalRAG.py.<module>:2105] - --- [Main Flow] Step 2: Initialize Indexer and build index for loaded documents ---
+2025-06-17 09:24:07,776 - INFO - [MultimodalRAG.py.<module>:2119] - Index building/loading complete. Current status:
+2025-06-17 09:24:07,776 - INFO - [MultimodalRAG.py.<module>:2125] -   - SQLite Database ('multimodal_doc_store.db') document records: 615
+2025-06-17 09:24:07,776 - INFO - [MultimodalRAG.py.<module>:2126] -   - Text Faiss Index ('text_vector_index.faiss') vectors: 615
+2025-06-17 09:24:07,776 - INFO - [MultimodalRAG.py.<module>:2127] -   - Image Faiss Index ('image_vector_index.faiss') vectors: 227
+2025-06-17 09:24:07,776 - INFO - [MultimodalRAG.py.<module>:2128] -   - Mean Faiss Index ('mean_vector_index.faiss') vectors: 227
+2025-06-17 09:24:07,776 - INFO - [MultimodalRAG.py.<module>:2144] - --- [Main Flow] Step 2 Complete. ---
+
+2025-06-17 09:24:07,983 - INFO - [MultimodalRAG.py.<module>:2151] - --- [Main Flow] Step 3: Initialize Retriever ---
+2025-06-17 09:24:07,983 - INFO - [MultimodalRAG.py.<module>:2175] - --- [Main Flow] Step 3 Complete. ---
+
+2025-06-17 09:24:08,184 - INFO - [MultimodalRAG.py.<module>:2182] - --- [Main Flow] Step 4: Initialize Generator (will interact with ZhipuAI API) ---
+2025-06-17 09:24:08,184 - INFO - [MultimodalRAG.py.<module>:2196] - Environment variable 'ZHIPUAI_API_KEY' detected. Attempting to initialize Generator...
+2025-06-17 09:24:09,263 - INFO - [MultimodalRAG.py.<module>:2204] - --- [Main Flow] Step 4 Complete. ---
+
+2025-06-17 09:24:09,464 - INFO - [MultimodalRAG.py.<module>:2211] - --- [Main Flow] Step 5: Execute RAG Query Examples (Retrieve + Generate) ---
+2025-06-17 09:24:09,464 - INFO - [MultimodalRAG.py.<module>:2215] - Retriever and Generator are both successfully initialized. Proceeding with example queries...
+2025-06-17 09:24:09,465 - INFO - [MultimodalRAG.py.<module>:2260] - Found 15 documents with valid images. Randomly selecting 1 for image/multimodal query examples.
+2025-06-17 09:24:09,465 - INFO - [MultimodalRAG.py.<module>:2301] - 
+######################################################################
+>>> Starting Example Queries, Type: [Pure Text Query] (Total in this group: 2) <<<
+######################################################################
+
+2025-06-17 09:24:09,465 - INFO - [MultimodalRAG.py.<module>:2339] - 
+--- Processing Query #1 (Type: Pure Text Query - Index in group: 1/2) ---
+2025-06-17 09:24:09,465 - INFO - [MultimodalRAG.py.<module>:2341] - Query Description: What is a bandgap voltage reference and its main purpose?
+2025-06-17 09:24:09,465 - INFO - [MultimodalRAG.py.<module>:2351] -   -> Input Text for Retriever: 'What is a bandgap voltage reference and its main purpose?'
+2025-06-17 09:24:09,465 - INFO - [MultimodalRAG.py.<module>:2357] -   -> Question Text for Generator: 'What is a bandgap voltage reference and its main purpose?'
+2025-06-17 09:24:09,465 - INFO - [MultimodalRAG.py.<module>:2360] - ------------------------------
+2025-06-17 09:24:09,474 - INFO - [MultimodalRAG.py.<module>:2371] -   Detailed results for this query will be saved to: multimodal_rag_system_output\query_session_results\query_001_TextQuery_What_is_a_bandgap_voltage_reference_and_its_main_p
+2025-06-17 09:24:09,474 - INFO - [MultimodalRAG.py.<module>:2395] -   [Retrieval Stage] Calling Retriever.retrieve() method...
+2025-06-17 09:24:09,516 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2222] -     >> Retrieval Result: Found Top-2 relevant documents. Summary:
+2025-06-17 09:24:09,516 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2231] -       1. Document ID: Bandgap40 (Score: 0.8724)
+2025-06-17 09:24:09,516 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2232] -          Text Preview: ': Evidence for Bandgap Reference Circuit Identification:**\n1. **PTAT ...', Associated Image: 'Bandgap40.png'
+2025-06-17 09:24:09,516 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2231] -       2. Document ID: Bandgap31 (Score: 0.8659)
+2025-06-17 09:24:09,516 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2232] -          Text Preview: '**\n\n**Evidence for Bandgap Reference Circuit Identification:**\n\n1....', Associated Image: 'Bandgap31.png'
+2025-06-17 09:24:09,516 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2233] -     ----------------------------------------
+2025-06-17 09:24:09,519 - INFO - [MultimodalRAG.py.<module>:2419] -   [Generation Stage] Calling Generator.generate() method (using retrieved context)...
+2025-06-17 09:24:18,879 - INFO - [MultimodalRAG.py.<module>:2425] - 
+  <<< Final Response Generated by LLM for Query #1 >>>
+2025-06-17 09:24:18,879 - INFO - [MultimodalRAG.py.<module>:2426] - -----------------------------------
+2025-06-17 09:24:18,879 - INFO - [MultimodalRAG.py.<module>:2427] - A bandgap voltage reference is a type of electronic circuit that generates a stable voltage reference, which is independent of temperature and supply variations. Its main purpose is to provide a stable voltage reference for various electronic circuits and systems.
+
+The key features and components of a bandgap voltage reference, as described in the provided reference documents, include:
+
+1. **PTAT Voltage Generation:** This involves transistors like Q1 and Q2 with unequal emitter areas, which generate a voltage (\( \Delta V_{BE} \)) proportional to temperature.
+
+2. **CTAT Voltage Source:** Transistor Q3 provides a CTAT (cathode temperature-dependent) voltage from its base-emitter junction.
+
+3. **Voltage Summing:** Resistors R1 and R2 combine the PTAT and CTAT components to produce a stable output voltage.
+
+4. **Output Voltage Stability:** The resulting voltage (\( V_{REF} \)) is typically around 1.2V and remains stable regardless of temperature and supply variations.
+
+5. **Feedback Structure:** Current mirrors (M1–M5) ensure proper biasing and stability of the circuit.
+
+The bandgap reference circuit is identified by these characteristics and is used in various applications where a stable voltage reference is required, such as in analog circuits, power supplies, and data acquisition systems.
+2025-06-17 09:24:18,879 - INFO - [MultimodalRAG.py.<module>:2428] - -----------------------------------
+2025-06-17 09:24:18,879 - INFO - [MultimodalRAG.py.<module>:2459] - --- Query #1 Processing Complete ---
+2025-06-17 09:24:18,879 - INFO - [MultimodalRAG.py.<module>:2463] - 
+...Pausing for 0.5 seconds before next query in this group...
+----------------------------------------------------------------------
+
+2025-06-17 09:24:19,387 - INFO - [MultimodalRAG.py.<module>:2339] - 
+--- Processing Query #2 (Type: Pure Text Query - Index in group: 2/2) ---
+2025-06-17 09:24:19,387 - INFO - [MultimodalRAG.py.<module>:2341] - Query Description: Explain how the PTAT current is generated and its role in a bandgap circuit.
+2025-06-17 09:24:19,387 - INFO - [MultimodalRAG.py.<module>:2351] -   -> Input Text for Retriever: 'Explain how the PTAT current is generated and its role in a bandgap circuit.'
+2025-06-17 09:24:19,387 - INFO - [MultimodalRAG.py.<module>:2357] -   -> Question Text for Generator: 'Explain how the PTAT current is generated and its role in a bandgap circuit.'
+2025-06-17 09:24:19,390 - INFO - [MultimodalRAG.py.<module>:2360] - ------------------------------
+2025-06-17 09:24:19,390 - INFO - [MultimodalRAG.py.<module>:2371] -   Detailed results for this query will be saved to: multimodal_rag_system_output\query_session_results\query_002_TextQuery_Explain_how_the_PTAT_current_is_generated_and_its_
+2025-06-17 09:24:19,390 - INFO - [MultimodalRAG.py.<module>:2395] -   [Retrieval Stage] Calling Retriever.retrieve() method...
+2025-06-17 09:24:19,417 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2222] -     >> Retrieval Result: Found Top-2 relevant documents. Summary:
+2025-06-17 09:24:19,417 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2231] -       1. Document ID: Bandgap68 (Score: 0.9006)
+2025-06-17 09:24:19,429 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2232] -          Text Preview: '**\n\nThis circuit can be conclusively identified as a **bandgap refer...', Associated Image: 'Bandgap68.png'
+2025-06-17 09:24:19,429 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2231] -       2. Document ID: Bandgap59 (Score: 0.8943)
+2025-06-17 09:24:19,429 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2232] -          Text Preview: ': This circuit can be considered a bandgap reference circuit because o...', Associated Image: 'Bandgap59.png'
+2025-06-17 09:24:19,429 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2233] -     ----------------------------------------
+2025-06-17 09:24:19,429 - INFO - [MultimodalRAG.py.<module>:2419] -   [Generation Stage] Calling Generator.generate() method (using retrieved context)...
+2025-06-17 09:24:30,853 - INFO - [MultimodalRAG.py.<module>:2425] - 
+  <<< Final Response Generated by LLM for Query #2 >>>
+2025-06-17 09:24:30,853 - INFO - [MultimodalRAG.py.<module>:2426] - -----------------------------------
+2025-06-17 09:24:30,853 - INFO - [MultimodalRAG.py.<module>:2427] - The PTAT (Proportional To Absolute Temperature) current in a bandgap circuit is generated through the following process:
+
+1. **Presence of PTAT and CTAT Components:** In a bandgap reference circuit, the PTAT voltage is typically provided by the voltage drop across a diode or a transistor's base-emitter junction (such as \( \Delta V_{BE} \) from Q1, Q2, and R0-R2 in the Bandgap68 circuit). This voltage varies linearly with temperature.
+
+2. **Temperature Variation:** As the temperature changes, the voltage drop across these components also changes proportionally. This voltage change is then used to generate a current that varies with temperature.
+
+The role of the PTAT current in a bandgap circuit is crucial for achieving temperature stability:
+
+- **Temperature Compensation:** The PTAT current helps in compensating for the temperature variations in other parts of the circuit. By generating a current that varies with temperature, it can be used to counterbalance the effects of temperature on other circuit components.
+
+- **Stabilizing the Reference Voltage:** In a bandgap reference circuit, the PTAT current is often used in conjunction with a CTAT (Coefficient Temperature-Dependent) current to create a stable reference voltage. The PTAT current's contribution ensures that the reference voltage remains relatively constant over a range of temperatures.
+
+In summary, the PTAT current in a bandgap circuit is generated through temperature-sensitive components and plays a critical role in temperature compensation and stabilizing the reference voltage.
+2025-06-17 09:24:30,853 - INFO - [MultimodalRAG.py.<module>:2428] - -----------------------------------
+2025-06-17 09:24:30,853 - INFO - [MultimodalRAG.py.<module>:2459] - --- Query #2 Processing Complete ---
+2025-06-17 09:24:30,853 - INFO - [MultimodalRAG.py.<module>:2466] - 
+######################################################################
+>>> All Example Queries of Type [Pure Text Query] Processed <<<
+######################################################################
+
+2025-06-17 09:24:31,359 - INFO - [MultimodalRAG.py.<module>:2301] - 
+######################################################################
+>>> Starting Example Queries, Type: [Pure Image Query] (Total in this group: 1) <<<
+######################################################################
+
+2025-06-17 09:24:31,359 - INFO - [MultimodalRAG.py.<module>:2339] - 
+--- Processing Query #3 (Type: Pure Image Query - Index in group: 1/1) ---
+2025-06-17 09:24:31,359 - INFO - [MultimodalRAG.py.<module>:2341] - Query Description: PureImageQuery_About_gru.png
+2025-06-17 09:24:31,359 - INFO - [MultimodalRAG.py.<module>:2349] -   -> Input Image for Retriever: 'gru.png'
+2025-06-17 09:24:31,359 - INFO - [MultimodalRAG.py.<module>:2357] -   -> Question Text for Generator: 'What circuit structure or key concept does this image (filename: gru.png) primarily show? Please exp...'
+2025-06-17 09:24:31,359 - INFO - [MultimodalRAG.py.<module>:2360] - ------------------------------
+2025-06-17 09:24:31,364 - INFO - [MultimodalRAG.py.<module>:2371] -   Detailed results for this query will be saved to: multimodal_rag_system_output\query_session_results\query_003_PureImageQuery_About_gru.png
+2025-06-17 09:24:31,367 - INFO - [MultimodalRAG.py.<module>:2395] -   [Retrieval Stage] Calling Retriever.retrieve() method...
+2025-06-17 09:24:31,438 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2222] -     >> Retrieval Result: Found Top-2 relevant documents. Summary:
+2025-06-17 09:24:31,438 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2231] -       1. Document ID: gru (Score: 1.0000)
+2025-06-17 09:24:31,438 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2232] -          Text Preview: 'gru模型架构', Associated Image: 'gru.png'
+2025-06-17 09:24:31,438 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2231] -       2. Document ID: lstm (Score: 0.9606)
+2025-06-17 09:24:31,438 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2232] -          Text Preview: 'lstm模型架构', Associated Image: 'lstm.png'
+2025-06-17 09:24:31,438 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2233] -     ----------------------------------------
+2025-06-17 09:24:31,440 - INFO - [MultimodalRAG.py.<module>:2419] -   [Generation Stage] Calling Generator.generate() method (using retrieved context)...
+2025-06-17 09:24:35,134 - INFO - [MultimodalRAG.py.<module>:2425] - 
+  <<< Final Response Generated by LLM for Query #3 >>>
+2025-06-17 09:24:35,135 - INFO - [MultimodalRAG.py.<module>:2426] - -----------------------------------
+2025-06-17 09:24:35,135 - INFO - [MultimodalRAG.py.<module>:2427] - 根据提供的参考文档，文档中提到了一个名为 'gru.png' 的关联图片，但是文档中缺少对该图片内容的具体文字描述。因此，我无法提供关于图片 'gru.png' 所展示的电路结构或关键概念的详细信息。根据文档 ID 'gru' 的描述，我无法找到回答该问题所需的信息。
+2025-06-17 09:24:35,136 - INFO - [MultimodalRAG.py.<module>:2428] - -----------------------------------
+2025-06-17 09:24:35,137 - INFO - [MultimodalRAG.py.<module>:2459] - --- Query #3 Processing Complete ---
+2025-06-17 09:24:35,137 - INFO - [MultimodalRAG.py.<module>:2466] - 
+######################################################################
+>>> All Example Queries of Type [Pure Image Query] Processed <<<
+######################################################################
+
+2025-06-17 09:24:35,638 - INFO - [MultimodalRAG.py.<module>:2301] - 
+######################################################################
+>>> Starting Example Queries, Type: [Multimodal Query] (Total in this group: 1) <<<
+######################################################################
+
+2025-06-17 09:24:35,638 - INFO - [MultimodalRAG.py.<module>:2339] - 
+--- Processing Query #4 (Type: Multimodal Query - Index in group: 1/1) ---
+2025-06-17 09:24:35,638 - INFO - [MultimodalRAG.py.<module>:2341] - Query Description: MultimodalQuery_ExplainImage_gru.png
+2025-06-17 09:24:35,638 - INFO - [MultimodalRAG.py.<module>:2347] -   -> Input Text for Retriever: 'Combining the document content and this image (filename: gru.png), please explai...'
+2025-06-17 09:24:35,638 - INFO - [MultimodalRAG.py.<module>:2349] -   -> Input Image for Retriever: 'gru.png'
+2025-06-17 09:24:35,638 - INFO - [MultimodalRAG.py.<module>:2357] -   -> Question Text for Generator: 'Combining the document content and this image (filename: gru.png), please explain the working princi...'
+2025-06-17 09:24:35,638 - INFO - [MultimodalRAG.py.<module>:2360] - ------------------------------
+2025-06-17 09:24:35,638 - INFO - [MultimodalRAG.py.<module>:2371] -   Detailed results for this query will be saved to: multimodal_rag_system_output\query_session_results\query_004_MultimodalQuery_ExplainImage_gru.png
+2025-06-17 09:24:35,648 - INFO - [MultimodalRAG.py.<module>:2395] -   [Retrieval Stage] Calling Retriever.retrieve() method...
+2025-06-17 09:24:35,742 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2222] -     >> Retrieval Result: Found Top-2 relevant documents. Summary:
+2025-06-17 09:24:35,742 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2231] -       1. Document ID: Comparator56 (Score: 0.9179)
+2025-06-17 09:24:35,742 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2232] -          Text Preview: '**
+
+**Analysis Conclusion:**
+Based on the circuit structure and compon...', Associated Image: 'Comparator56.png'
+2025-06-17 09:24:35,742 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2231] -       2. Document ID: gru (Score: 0.9115)
+2025-06-17 09:24:35,742 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2232] -          Text Preview: 'gru模型架构', Associated Image: 'gru.png'
+2025-06-17 09:24:35,743 - INFO - [MultimodalRAG.py.log_retrieved_docs_summary_for_main_process:2233] -     ----------------------------------------
+2025-06-17 09:24:35,744 - INFO - [MultimodalRAG.py.<module>:2419] -   [Generation Stage] Calling Generator.generate() method (using retrieved context)...
+2025-06-17 09:24:48,679 - INFO - [MultimodalRAG.py.<module>:2425] - 
+  <<< Final Response Generated by LLM for Query #4 >>>
+2025-06-17 09:24:48,679 - INFO - [MultimodalRAG.py.<module>:2426] - -----------------------------------
+2025-06-17 09:24:48,679 - INFO - [MultimodalRAG.py.<module>:2427] - Based on the provided reference documents and the image filename 'gru.png', I can infer that the image likely represents a circuit related to the 'gru' model architecture. However, the reference documents do not contain specific information about the working principle, key features, or design considerations of the circuit shown in 'gru.png'. 
+
+The text content from Reference Document 1 describes a comparator circuit, which is a different type of circuit. It details the components and functions of a comparator, such as the differential input stage, current mirror load, gain stage, output buffer/logic inverter, bias/tail current source, and more. This information is not directly related to the 'gru.png' image.
+
+Since there is no specific information about the 'gru.png' image in the provided reference documents, I cannot provide a detailed explanation of its working principle, key features, or design considerations. 
+
+Therefore, my answer is:
+According to the provided reference documents, I cannot find information about the working principle, key features, or design considerations of the circuit shown in the image 'gru.png'.
+2025-06-17 09:24:48,679 - INFO - [MultimodalRAG.py.<module>:2428] - -----------------------------------
+2025-06-17 09:24:48,687 - INFO - [MultimodalRAG.py.<module>:2459] - --- Query #4 Processing Complete ---
+2025-06-17 09:24:48,687 - INFO - [MultimodalRAG.py.<module>:2466] - 
+######################################################################
+>>> All Example Queries of Type [Multimodal Query] Processed <<<
+######################################################################
+
+2025-06-17 09:24:49,188 - INFO - [MultimodalRAG.py.<module>:2480] - --- [Main Flow] Step 5 (RAG Query Examples) Complete. ---
+
+2025-06-17 09:24:49,188 - INFO - [MultimodalRAG.py.<module>:2486] - --- [Main Flow] Step 6: Cleanup and Close System Resources ---
+2025-06-17 09:24:49,188 - INFO - [MultimodalRAG.py.<module>:2512] - --- [Main Flow] System resource cleanup and closing process complete. ---
+
+2025-06-17 09:24:49,188 - INFO - [MultimodalRAG.py.<module>:2514] - 
+================================================================================
+2025-06-17 09:24:49,188 - INFO - [MultimodalRAG.py.<module>:2515] - ========= Multimodal RAG System Example Program Execution Finished =========
+2025-06-17 09:24:49,188 - INFO - [MultimodalRAG.py.<module>:2516] - All output (logs, database, indices, query results) saved to the fixed top-level directory:
+2025-06-17 09:24:49,188 - INFO - [MultimodalRAG.py.<module>:2517] -   D:\_MyFile\project\MultimodalRAG\multimodal_rag_system_output
+2025-06-17 09:24:49,188 - INFO - [MultimodalRAG.py.<module>:2518] - Key subdirectory overview:
+2025-06-17 09:24:49,197 - INFO - [MultimodalRAG.py.<module>:2519] -   - multimodal_rag_system_output\logs/
+2025-06-17 09:24:49,197 - INFO - [MultimodalRAG.py.<module>:2520] -   - multimodal_rag_system_output\data_storage\database/
+2025-06-17 09:24:49,197 - INFO - [MultimodalRAG.py.<module>:2521] -   - multimodal_rag_system_output\data_storage\vector_indices/
+2025-06-17 09:24:49,197 - INFO - [MultimodalRAG.py.<module>:2522] -   - multimodal_rag_system_output\query_session_results/
+2025-06-17 09:24:49,197 - INFO - [MultimodalRAG.py.<module>:2523] -     (Under query_session_results/, each 'query_XXX_...' subdirectory contains detailed input/output for a single query)
+2025-06-17 09:24:49,198 - WARNING - [MultimodalRAG.py.<module>:2524] - REMINDER: Since the top-level directory 'multimodal_rag_system_output' is fixed, running the script again with the same identifier will OVERWRITE its contents.
+2025-06-17 09:24:49,198 - INFO - [MultimodalRAG.py.<module>:2525] - ================================================================================
+

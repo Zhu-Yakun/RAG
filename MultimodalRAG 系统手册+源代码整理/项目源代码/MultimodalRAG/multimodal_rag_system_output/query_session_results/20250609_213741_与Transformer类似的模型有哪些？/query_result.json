@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 231,
+            "text": "transformer模型架构",
+            "image_path": "images\\transformer.png",
+            "id": "transformer",
+            "score": 0.9460766911506653
+        },
+        {
+            "internal_id": 349,
+            "text": "使用Transformer的Encoder结构进行特征抽取。对于一个给定的样本（标记），它的输入包括三部分的编码 （embedding）：token, segment, and position.。",
+            "image_path": null,
+            "id": "4-上下文表征（修改）27",
+            "score": 0.9384950399398804
+        },
+        {
+            "internal_id": 329,
+            "text": "• Transformer 的核心部分，包含一个 编码器层和解码器层的堆栈。• 在编码器堆栈和解码器堆栈之前，都 有对应的嵌入层。• 而在解码器堆栈后，有一个输出层来 生成最终的输出。",
+            "image_path": null,
+            "id": "4-上下文表征（修改）7",
+            "score": 0.9359963536262512
+        }
+    ],
+    "generated_response": "I could not find relevant information in the knowledge base. The following answer is based on my general knowledge and may not be professionally accurate.\n\n与Transformer类似的模型包括：\n\n1. **BERT (Bidirectional Encoder Representations from Transformers)**: BERT是一种预训练语言表示模型，它使用Transformer架构进行双向上下文编码。\n2. **GPT (Generative Pre-trained Transformer)**: GPT是一种基于Transformer的模型，用于生成文本，它通过无监督学习来预测下一个词。\n3. **XLNet**: XLNet是一种基于Transformer的模型，它通过引入“掩码语言模型”来改进预训练过程。\n4. **RoBERTa**: RoBERTa是BERT的一个变种，它在BERT的基础上进行了优化，以提高性能。\n5. **ALBERT (A Lite BERT)**: ALBERT通过参数共享和层归一化来减少模型大小和提高效率。\n\n这些模型都基于Transformer架构，但各自有不同的应用和改进。",
+    "error": null
+}

@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 484,
+            "text": "BERT和GPT3的区别与对比",
+            "image_path": "BERT_GPT3的区别.png",
+            "id": "BERT_GPT3的区别",
+            "score": 0.8760276436805725
+        },
+        {
+            "internal_id": 220,
+            "text": "Bert模型架构。",
+            "image_path": "Bert.png",
+            "id": "Bert",
+            "score": 0.8379769325256348
+        },
+        {
+            "internal_id": 221,
+            "text": "Blip模型架构",
+            "image_path": "Blip.png",
+            "id": "Blip",
+            "score": 0.7748545408248901
+        }
+    ],
+    "generated_response": "I could not find relevant information in the knowledge base. The following answer is based on my general knowledge and may not be professionally accurate.\n\nThe question refers to an image, but there is no description or filename provided in the reference documents. Typically, when discussing technical diagrams related to models like BERT or GPT3, these images often depict the architecture of the model, showing its layers, components, and how data flows through the model. However, without specific details from the reference documents, I cannot provide an accurate description of the content of the image in question.",
+    "error": null
+}

@@ -1,0 +1,16 @@
+[
+    {
+        "internal_id": 225,
+        "text": "gru模型架构",
+        "image_path": "images\\gru.png",
+        "id": "gru",
+        "score": 1.0000001192092896
+    },
+    {
+        "internal_id": 228,
+        "text": "lstm模型架构",
+        "image_path": "images\\lstm.png",
+        "id": "lstm",
+        "score": 0.9605522751808167
+    }
+]

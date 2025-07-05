@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 484,
+            "text": "BERT和GPT3的区别与对比",
+            "image_path": "BERT_GPT3的区别.png",
+            "id": "BERT_GPT3的区别",
+            "score": 0.8762787580490112
+        },
+        {
+            "internal_id": 220,
+            "text": "Bert模型架构。",
+            "image_path": "Bert.png",
+            "id": "Bert",
+            "score": 0.837385892868042
+        },
+        {
+            "internal_id": 221,
+            "text": "Blip模型架构",
+            "image_path": "Blip.png",
+            "id": "Blip",
+            "score": 0.7746977806091309
+        }
+    ],
+    "generated_response": "I could not find relevant information in the knowledge base. The following answer is based on my general knowledge and may not be professionally accurate.\n\nThe question refers to an image, but no textual description or filename is provided in the reference documents. Therefore, I cannot provide specific details about what the image contains. Generally, in the context of the provided reference documents, images might depict model architectures or comparisons between different models like BERT, GPT-3, or Blip.",
+    "error": null
+}

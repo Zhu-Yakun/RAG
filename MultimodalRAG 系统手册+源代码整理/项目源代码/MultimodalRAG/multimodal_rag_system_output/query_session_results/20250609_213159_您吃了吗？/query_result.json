@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 233,
+            "text": "知识图谱示例",
+            "image_path": "images\\知识图谱.png",
+            "id": "知识图谱",
+            "score": 0.9769536256790161
+        },
+        {
+            "internal_id": 262,
+            "text": "你知道计算机是如何理解这句话的吗？",
+            "image_path": null,
+            "id": "2.1 自动分词（传统方法）2",
+            "score": 0.966148853302002
+        },
+        {
+            "internal_id": 368,
+            "text": "• 给定一个滑动的窗口，求窗口内中心词的周围词，例如上图中窗口大小 就是2，就中心词往前往后各数两个词作为周围词。• 对句子中的每一个词都给一个窗口，并求窗口内中心词出现时每一个周 围词出现的概率。",
+            "image_path": null,
+            "id": "4-非上下文表征模型12",
+            "score": 0.9632216095924377
+        }
+    ],
+    "generated_response": "I could not find relevant information in the knowledge base. The following answer is based on my general knowledge and may not be professionally accurate.\n\nI am an AI, so I do not eat. However, as a general practice, it is polite to ask someone if they have eaten when you see them, as it is a common social greeting.",
+    "error": null
+}

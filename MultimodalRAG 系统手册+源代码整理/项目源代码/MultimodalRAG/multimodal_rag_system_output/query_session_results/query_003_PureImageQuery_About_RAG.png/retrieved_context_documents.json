@@ -1,0 +1,16 @@
+[
+    {
+        "internal_id": 229,
+        "text": "RAG方法流程",
+        "image_path": "images\\RAG.png",
+        "id": "RAG",
+        "score": 1.0
+    },
+    {
+        "internal_id": 221,
+        "text": "Blip模型架构",
+        "image_path": "images\\Blip.png",
+        "id": "Blip",
+        "score": 0.7460135221481323
+    }
+]

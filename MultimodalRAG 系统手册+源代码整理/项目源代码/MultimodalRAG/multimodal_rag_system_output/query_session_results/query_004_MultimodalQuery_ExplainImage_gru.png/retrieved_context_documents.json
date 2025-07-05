@@ -1,0 +1,16 @@
+[
+    {
+        "internal_id": 102,
+        "text": "**\n\n**Analysis Conclusion:**\nBased on the circuit structure and components, the circuit is confirmed to be a comparator.\n\n**Evidence:**\n1. **Differential Input Stage (M1, M2):**\n   - Forms the core comparison function, responding to voltage differences between `IN+` and `IN−`.\n\n2. **Current Mirror Load (M3, M4):**\n   - Converts differential current into voltage for amplification.\n\n3. **Gain Stage (M5):**\n   - Amplifies the differential signal for driving the output stage.\n\n4. **Output Buffer / Logic Inverter (M6, M7):**\n   - Produces a full-swing digital output based on the amplified signal.\n\n5. **Bias / Tail Current Source (M9, M10):**\n   - Enhances stability and improves CMRR.\n\n6. **Optional Hysteresis Feedback (M8):**\n   - If implemented, stabilizes the switching threshold and prevents output chattering.\n\n**Performance Observations:**\n- **Input offset voltage:** Determined by M1/M2 mismatch.\n- **Propagation delay:** Delay from input threshold crossing to output switching.\n- **Output swing:** Verified rail-to-rail via CMOS inverter.\n- **CMRR/PSRR:** Enhanced via biasing and differential topology.\n- **Hysteresis width (if applicable):** Defines noise immunity threshold.\n\nThis design, incorporating differential inputs, amplification, and digital output generation, meets all functional requirements of a comparator.\n",
+        "image_path": "images\\Comparator56.png",
+        "id": "Comparator56",
+        "score": 0.9178677201271057
+    },
+    {
+        "internal_id": 225,
+        "text": "gru模型架构",
+        "image_path": "images\\gru.png",
+        "id": "gru",
+        "score": 0.9115147590637207
+    }
+]

@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 231,
+            "text": "transformer模型架构",
+            "image_path": "images\\transformer.png",
+            "id": "transformer",
+            "score": 0.93706214427948
+        },
+        {
+            "internal_id": 329,
+            "text": "• Transformer 的核心部分，包含一个 编码器层和解码器层的堆栈。• 在编码器堆栈和解码器堆栈之前，都 有对应的嵌入层。• 而在解码器堆栈后，有一个输出层来 生成最终的输出。",
+            "image_path": null,
+            "id": "4-上下文表征（修改）7",
+            "score": 0.8849377632141113
+        },
+        {
+            "internal_id": 443,
+            "text": "基于Transformer的 中-英机器翻译。pBERT取得成功的一个关键因素是Transformer的强大作用。Transformer由论文《Attention is All You Need》提出。pTransformer改进了RNN最被人诟病的训练慢的缺点，利用self-attention机制实现快速并行。首先将Transformer看成是一个黑箱操作。",
+            "image_path": null,
+            "id": "【NLP5.3】基于Transformer的中-英机器翻译1",
+            "score": 0.8777959942817688
+        }
+    ],
+    "generated_response": "Transformer和BERT都是用于自然语言处理的深度学习模型。\n\n1. **Transformer**：Transformer是由论文《Attention is All You Need》提出的，它主要利用self-attention机制实现快速并行。Transformer模型的核心部分包含一个编码器层和解码器层的堆栈。在编码器堆栈和解码器堆栈之前，都有对应的嵌入层。而在解码器堆栈后，有一个输出层来生成最终的输出。Transformer改进了RNN最被人诟病的训练慢的缺点，利用self-attention机制实现快速并行。\n\n2. **BERT**：BERT（Bidirectional Encoder Representations from Transformers）是基于Transformer的一种模型。pBERT取得成功的一个关键因素是Transformer的强大作用。BERT模型的核心思想是对输入的文本进行双向上下文编码，使得模型能够理解词语的含义不仅仅取决于它前面的词语，还取决于后面的词语。\n\n总结来说，Transformer是一种基于self-attention机制的模型，而BERT是基于Transformer的一种双向上下文编码模型。两者都是自然语言处理领域的重要模型。",
+    "error": null
+}

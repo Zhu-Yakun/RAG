@@ -1,0 +1,27 @@
+{
+    "retrieved_docs": [
+        {
+            "internal_id": 233,
+            "text": "知识图谱示例",
+            "image_path": "images\\知识图谱.png",
+            "id": "知识图谱",
+            "score": 0.9777750372886658
+        },
+        {
+            "internal_id": 317,
+            "text": "多部图。",
+            "image_path": null,
+            "id": "3.自动标注11",
+            "score": 0.9673592448234558
+        },
+        {
+            "internal_id": 262,
+            "text": "你知道计算机是如何理解这句话的吗？",
+            "image_path": null,
+            "id": "2.1 自动分词（传统方法）2",
+            "score": 0.9668600559234619
+        }
+    ],
+    "generated_response": "I could not find relevant information in the knowledge base. The following answer is based on my general knowledge and may not be professionally accurate.\n\n美团是中国的一家大型在线生活服务电子商务平台，成立于2010年。它提供的服务包括在线订餐、外卖配送、酒店预订、电影票务、旅游预订等。美团通过其平台连接消费者和商家，为用户提供便捷的生活服务。",
+    "error": null
+}
